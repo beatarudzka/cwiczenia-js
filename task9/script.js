@@ -18,7 +18,7 @@ square.addEventListener("mouseup", (event) => {
 square.addEventListener("mousemove", (event) => {
   const x = event.clientX
   const y = event.clientY
-  console.log(x)
-  console.log(y)
+  square.style.left = `${x}px`
+  square.style.top = `${y}px`
 
 })
