@@ -1,24 +1,30 @@
 square = document.querySelector('div')
 
-let divX = 150
-let divY = 50
-
-square.style.left = `${divX}px`
-square.style.top = `${divY}px`
+let divX
+let divY
+// square.style.left = `${divX}px`
+// square.style.top = `${divY}px`
+let drawActive = false
 
 square.addEventListener("mousedown", (event) => {
   square.style.backgroundColor = "grey"
-
+  divX = event.offsetX
+  divY = event.offsetY
+  drawActive = !drawActive
 })
 
-square.addEventListener("mouseup", (event) => {
+square.addEventListener("mouseup", () => {
   square.style.backgroundColor = "black"
+  drawActive = !drawActive
 })
 
 square.addEventListener("mousemove", (event) => {
-  const x = event.clientX
-  const y = event.clientY
-  square.style.left = `${x}px`
-  square.style.top = `${y}px`
-
+  if (drawActive) {
+    const x = event.clientX
+    const y = event.clientY
+    let insertDivX = x - divX
+    let insertDivY = y - divY
+    square.style.left = `${insertDivX}px`
+    square.style.top = `${insertDivY}px`
+  }
 })
