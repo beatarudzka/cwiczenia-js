@@ -8,3 +8,8 @@ input {
   line-height: 4vw;
   font-size: 2vw;
 }
+
+.message{
+  border-block-color: black;
+  padding: 2vw;
+}
