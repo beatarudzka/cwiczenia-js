@@ -5,6 +5,10 @@ const password = '1234'
 const message = 'wyjechałam na zawsze'
 
 input.addEventListener('input', (event) => {
-  if (event.target.value === password)
+  if (event.target.value === password) {
     div.textContent = message
+    event.target.value = ''
+  } else {
+    div.textContent = ''
+  }
 })
