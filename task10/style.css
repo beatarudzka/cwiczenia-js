@@ -13,3 +13,8 @@ input {
   border-block-color: black;
   padding: 2vw;
 }
+
+.active {
+  background-color: brown;
+  color: white;
+}

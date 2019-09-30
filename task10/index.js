@@ -12,3 +12,7 @@ input.addEventListener('input', (event) => {
     div.textContent = ''
   }
 })
+
+input.addEventListener('focus', (event) => {
+  event.target.classList.add('active')
+})
