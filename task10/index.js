@@ -16,3 +16,7 @@ input.addEventListener('input', (event) => {
 input.addEventListener('focus', (event) => {
   event.target.classList.add('active')
 })
+
+input.addEventListener('blur', (event) => {
+  event.target.classList.remove('active')
+})
