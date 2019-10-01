@@ -6,8 +6,14 @@ const charsNumber = 10
 
 const codesGenerator = () => {
   for (let i = 0; i < codesNumber; i++) {
+    let code = ""
+    for (let i = 0; i < charsNumber; i++) {
+      let index = Math.floor(Math.random() * 30)
+      code += chars[index]
+    }
+
     const div = document.createElement('div')
-    div.textContent = chars
+    div.textContent = code
     document.body.appendChild(div)
   }
 }
