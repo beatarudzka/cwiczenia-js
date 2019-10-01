@@ -8,8 +8,11 @@ input.addEventListener('input', (event) => {
 
   const text = event.target.value
   passwords.forEach((password, index) => {
-    if (password === text)
+    if (password === text) {
       div.textContent = messages[index]
+    } else {
+      div.textContent = ''
+    }
   })
 })
 
