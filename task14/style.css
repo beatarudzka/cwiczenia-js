@@ -1,0 +1,11 @@
+button{
+  background-color: beige;
+  text-align: center;
+}
+
+form{
+  display: block;
+}
+body{
+  font-size: 26px;
+}
