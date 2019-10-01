@@ -9,9 +9,9 @@ let possibilities = ['wyjdź na spacer z psem', 'wykonaj codzienny trening']
 const addPossibility = (event) => {
   event.preventDefault()
   const input = document.querySelector('input')
-  const possibility = input.value
-  possibilities.push(possibility)
-  console.log(possibilities)
+  const newPossibility = input.value
+  possibilities.push(newPossibility)
+  div.textContent = `Dodana nowa możliwość: ${newPossibility}`
 }
 
 addPossibilityButton.addEventListener('click', addPossibility)
