@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  margin: 5vw;
+  font-family: Arial, Helvetica, sans-serif;
+}
+input {
+  height: 4vw;
+  line-height: 4vw;
+  font-size: 2vw;
+}
+
+.message{
+  border-block-color: black;
+  padding: 2vw;
+}
+
+.active {
+  background-color: brown;
+  color: white;
+}
