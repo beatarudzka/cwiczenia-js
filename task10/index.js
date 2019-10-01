@@ -1,16 +1,16 @@
 const input = document.querySelector('.password')
 const div = document.querySelector('.message')
 
-const password = '1234'
-const message = 'wyjechałam na zawsze'
+const passwords = ['1234', 'wiosna']
+const messages = ['wyjechałam na zawsze', 'piękna pora roku']
 
 input.addEventListener('input', (event) => {
-  if (event.target.value === password) {
-    div.textContent = message
-    event.target.value = ''
-  } else {
-    div.textContent = ''
-  }
+
+  const text = event.target.value
+  passwords.forEach((password, index) => {
+    if (password === text)
+      div.textContent = messages[index]
+  })
 })
 
 input.addEventListener('focus', (event) => {
