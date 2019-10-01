@@ -5,14 +5,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 input {
-  height: 2vw;
-  line-height: 2vw;
+  height: 3vw;
+  line-height: 3vw;
   font-size: 1vw;
+  width: 30vw;
 }
 button{
-  height: 2vw;
-  line-height: 2vw;
+  height: 3vw;
+  line-height: 3vw;
   font-size: 1vw;
   background-color: cadetblue;
   color: white;
+}
+div{
+  padding: 20px;
+  margin: 20px;
+  border: solid black;
 }

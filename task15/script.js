@@ -13,5 +13,10 @@ const addPossibility = (event) => {
   possibilities.push(newPossibility)
   div.textContent = `Dodana nowa możliwość: ${newPossibility}`
 }
-
+const reset = (event) => {
+  event.preventDefault()
+  possibilities = []
+  div.textContent = "Zresetowano wszystkie możliwości"
+}
 addPossibilityButton.addEventListener('click', addPossibility)
+resetButton.addEventListener('click', reset)
