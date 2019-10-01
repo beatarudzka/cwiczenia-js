@@ -6,10 +6,14 @@ const div = document.querySelector('div')
 
 const addName = (event) => {
   event.preventDefault()
+  const newName = input.value
   if (input.value.length) {
-    const name = input.value
-    names.push(name)
-    div.textContent += name + ','
+    for (name of names) {
+      if (name === newName)
+        return
+    }
+    names.push(newName)
+    div.textContent += newName + ','
     input.value = ''
   }
 }
