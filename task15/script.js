@@ -5,14 +5,16 @@ const showAllPossibilitiesButton = document.querySelector('.showAllPossibilities
 const div = document.querySelector('div')
 
 let possibilities = ['wyjdź na spacer z psem', 'wykonaj codzienny trening']
-let prefixes = []
+
 
 const addPossibility = (event) => {
   event.preventDefault()
   const input = document.querySelector('input')
   const newPossibility = input.value
-  possibilities.push(newPossibility)
-  div.textContent = `Dodana nowa możliwość: ${newPossibility}`
+  if (!possibilities.length === 0) {
+    possibilities.push(newPossibility)
+    div.textContent = `Dodana nowa możliwość: ${newPossibility}`
+  }
 }
 const reset = (event) => {
   event.preventDefault()
@@ -26,6 +28,11 @@ const showAdvise = (event) => {
     div.textContent = possibilities[index]
   }
 }
+const showAllPossibilities = (event) => {
+  event.preventDefault()
+  div.textContent = possibilities
+}
 addPossibilityButton.addEventListener('click', addPossibility)
 resetButton.addEventListener('click', reset)
 showAdviseButton.addEventListener('click', showAdvise)
+showAllPossibilitiesButton.addEventListener('click', showAllPossibilities)
