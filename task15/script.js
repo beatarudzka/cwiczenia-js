@@ -11,9 +11,10 @@ const addPossibility = (event) => {
   event.preventDefault()
   const input = document.querySelector('input')
   const newPossibility = input.value
-  if (!possibilities.length === 0) {
+  if (possibilities.length) {
     possibilities.push(newPossibility)
     div.textContent = `Dodana nowa możliwość: ${newPossibility}`
+    input.value = ''
   }
 }
 const reset = (event) => {
