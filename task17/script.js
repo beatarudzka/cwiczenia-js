@@ -1,7 +1,3 @@
-const names = ["bogdan", "rysiek", "andrzej", "darek"]
+const userAge = [20, 21, 32]
 
-const namesFirstLetterCapital = names.map(name =>
-  name[0].toUpperCase()
-)
-
-console.log(namesFirstLetterCapital)
+userAge.forEach(age => console.log(`W przyszłym roku użytkownik będzie mieć ${age + 1} lat.`))
