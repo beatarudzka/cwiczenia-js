@@ -1,7 +1,7 @@
 const userNames = ["bogdan", "czarek", "felek", "andrzej"]
 
 
-const namesWith6Letters = userNames.filter(user => {
-  return user.length === 6
+const namesWithK = userNames.filter(user => {
+  return user.indexOf('k') > -1
 })
-console.log(namesWith6Letters)
+console.log(namesWithK)
