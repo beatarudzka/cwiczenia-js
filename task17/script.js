@@ -1,8 +1,14 @@
-const customers = [
-  { name: "Adam ", age: 45 },
-  { name: "Ewa ", age: 42 },
-  { name: "Józef ", age: 15 }
-]
+class Country {
+  constructor(name) {
+    this.name = name
+    this.showName = () => console.log(this.name)
+  }
+  showCountryName() {
+    console.log(`Nazwa kraju to ${this.name}.`)
+  }
+}
 
-const isUserAdult = customers.find(customer => customer.age > 18)
-console.log(isUserAdult)
+const Poland = new Country('Polska')
+
+Poland.showCountryName()
+Poland.showName()
