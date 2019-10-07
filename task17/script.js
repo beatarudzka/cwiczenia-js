@@ -1,7 +1,13 @@
 const userAge = [20, 21, 32]
-let usersTotalAge = 0
 
-userAge.forEach(age => usersTotalAge += age)
+const section = document.createElement('section')
 
-console.log(usersTotalAge)
-
+userAge.forEach((age, index, array) => {
+  section.innerHTML += (
+    `<h1>Użytkownik ${index + 1}</h1>
+      <p>wiek: ${age}</p>`
+  )
+  if (index === array.length - 1) {
+    document.body.appendChild(section)
+  }
+})
