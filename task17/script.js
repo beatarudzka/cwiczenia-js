@@ -1,13 +1,7 @@
-const userAge = [20, 21, 32]
+const userNames = ["bogdan", "czarek", "felek", "andrzej"]
 
-const section = document.createElement('section')
 
-userAge.forEach((age, index, array) => {
-  section.innerHTML += (
-    `<h1>Użytkownik ${index + 1}</h1>
-      <p>wiek: ${age}</p>`
-  )
-  if (index === array.length - 1) {
-    document.body.appendChild(section)
-  }
+const namesWith6Letters = userNames.filter(user => {
+  return user.length === 6
 })
+console.log(namesWith6Letters)
