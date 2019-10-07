@@ -4,5 +4,5 @@ const customers = [
   { name: "Józef ", age: 15 }
 ]
 
-const isUserAdult = customers.findIndex(customer => customer.age > 18)
+const isUserAdult = customers.find(customer => customer.age > 18)
 console.log(isUserAdult)
