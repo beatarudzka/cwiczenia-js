@@ -3,9 +3,9 @@ const dog = {
   kids: ["łapciuch", "pimpek"],
   showKidsNames() {
     console.log("dzieci to: " + this.kids)
-    const numberOfKids = function () {
+    const numberOfKids = () => {
       console.log(this.kids.length)
-    }.bind(this)
+    }
     numberOfKids()
   }
 }
