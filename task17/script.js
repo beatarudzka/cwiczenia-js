@@ -1,10 +1,14 @@
 const dog = {
   name: "rocky",
-  showName() {
-    console.log("imię psa to " + this.name)
+  kids: ["łapciuch", "pimpek"],
+  showKidsNames() {
+    console.log("dzieci to: " + this.kids)
+    const numberOfKids = function () {
+      console.log(this.kids.length)
+    }.bind(this)
+    numberOfKids()
   }
 }
 
-dog.showName()
+dog.showKidsNames()
 
-const dogName = dog.showName.bind(dog)
