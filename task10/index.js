@@ -1,17 +1,17 @@
 const input = document.querySelector('.password')
 const div = document.querySelector('.message')
 
-const passwords = ['1234', 'wiosna']
-const messages = ['wyjechałam na zawsze', 'piękna pora roku']
+const passwords = ['', 'a', 'b', 'c']
+const messages = ['', 'piękna pora roku', 'wyjechałam na zawsze', 'mały ptak']
 
 input.addEventListener('input', (event) => {
 
   const text = event.target.value
   passwords.forEach((password, index) => {
-    if (password === text) {
+    console.log(password)
+    console.log(text)
+    if (password == text) {
       div.textContent = messages[index]
-    } else {
-      div.textContent = ''
     }
   })
 })

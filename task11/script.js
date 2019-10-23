@@ -5,7 +5,6 @@ const messages = ['11111', '22222']
 
 passwords.forEach((password, index) => {
   passwords[index] = password.toLowerCase()
-
 })
 
 const showMessages = (event) => {
