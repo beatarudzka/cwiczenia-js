@@ -1,8 +1,6 @@
 const listOfNumbers = [9, 8 - 2, 11 - 4, 3]
 
-let sum = 0
-
-for (let n of listOfNumbers)
-  sum += n
-
+const sum = listOfNumbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue
+}, 0)
 console.log(sum)
