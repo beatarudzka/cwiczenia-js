@@ -1,6 +1,7 @@
-const listOfNumbers = [9, 8 - 2, 11 - 4, 3]
+function SeriesSum(n) {
+  for (var s = 0, i = 0; i < n; i++) {
+    s += 1 / (1 + i * 3)
+  }
 
-const sum = listOfNumbers.reduce((accumulator, currentValue) => {
-  return accumulator + currentValue
-}, 0)
-console.log(sum)
+  return s.toFixed(2)
+}
