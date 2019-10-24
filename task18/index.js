@@ -1,7 +1,16 @@
-function SeriesSum(n) {
-  for (var s = 0, i = 0; i < n; i++) {
-    s += 1 / (1 + i * 3)
+let array = []
+let number = 0
+function FizzBuzz() {
+  array.push(number)
+  number++
+  console.log(array)
+  if (number % 15 === 0) {
+    array.push("Fizzbuzz")
+  } else if (number % 5 === 0) {
+    array.push("Fizz")
+  } else if (number % 3 === 0) {
+    array.push("Buzz")
   }
-
-  return s.toFixed(2)
 }
+
+FizzBuzz()
