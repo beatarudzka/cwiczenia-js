@@ -1,7 +1,14 @@
-function squareDigits(num) {
-  let array = num.toString().split("").map(function (int) {
-    let i = parseInt(int)
-    return i * i
-  })
-  return parseInt(array.join(''))
+function findShort(s) {
+  let array = s.split(' ')
+  for (let i = 0; i < array.length; i++) {
+    array[i] = array[i].length
+    console.log(array)
+  }
+  return Math.min(...array)
 }
+
+function findShort(s) {
+  let array = s.split(' ').map(word => word.length)
+  return Math.min(...array)
+}
+
