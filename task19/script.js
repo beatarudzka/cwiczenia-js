@@ -1,6 +1,7 @@
-const players = ["Andrzej", "Jacek", "Wiesiek", "Cyryl"]
-
-let [andrzej, ...users] = players
-
-console.log(andrzej)
-console.log(users)
+function squareDigits(num) {
+  let array = num.toString().split("").map(function (int) {
+    let i = parseInt(int)
+    return i * i
+  })
+  return parseInt(array.join(''))
+}
