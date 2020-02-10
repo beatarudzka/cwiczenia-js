@@ -4,3 +4,4 @@ const foodItems = shoppingItems.filter(({ category }) => category === 'food'
 )
 
 console.log(foodItems)
+

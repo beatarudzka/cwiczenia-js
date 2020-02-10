@@ -1,0 +1,1 @@
+const shoppingItems = require('./shoppingItems')
